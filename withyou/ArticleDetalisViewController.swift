@@ -15,6 +15,9 @@ class ArticleDetalisViewController:UIViewController {
    
         override func viewDidLoad() {
             super.viewDidLoad()
+            contentTextView.isEditable = false
+            contentTextView.isSelectable = false
+            contentTextView.isUserInteractionEnabled = false
             
             if let content = articleContent {
                 print("Content Received: \(content)")

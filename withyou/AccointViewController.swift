@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class AccointViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class AccointViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -184,7 +184,18 @@ class AccointViewController: UIViewController,UIImagePickerControllerDelegate,UI
         showAlert(title: "تم الحفظ", message: "تم حفظ البيانات بنجاح.")
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == firstname {
+            lastname.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
     
@@ -200,54 +211,54 @@ class AccointViewController: UIViewController,UIImagePickerControllerDelegate,UI
         }
     }
     
-    
     private func setupConstraints() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        profileImage.translatesAutoresizingMaskIntoConstraints = false
-        firstname.translatesAutoresizingMaskIntoConstraints = false
-        lastname.translatesAutoresizingMaskIntoConstraints = false
-        emaildisplay.translatesAutoresizingMaskIntoConstraints = false
-        copyInstructionLabel.translatesAutoresizingMaskIntoConstraints = false
-        birthday.translatesAutoresizingMaskIntoConstraints = false
-        gender.translatesAutoresizingMaskIntoConstraints = false
-        saveButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            profileImage.translatesAutoresizingMaskIntoConstraints = false
+            firstname.translatesAutoresizingMaskIntoConstraints = false
+            lastname.translatesAutoresizingMaskIntoConstraints = false
+            emaildisplay.translatesAutoresizingMaskIntoConstraints = false
+            copyInstructionLabel.translatesAutoresizingMaskIntoConstraints = false
+            birthday.translatesAutoresizingMaskIntoConstraints = false
+            gender.translatesAutoresizingMaskIntoConstraints = false
+            saveButton.translatesAutoresizingMaskIntoConstraints = false
             
-            profileImage.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            profileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            profileImage.widthAnchor.constraint(equalToConstant: 120),
-            profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor),
-            
-            firstname.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 30),
-            firstname.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            firstname.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            
-            lastname.topAnchor.constraint(equalTo: firstname.bottomAnchor, constant: 20),
-            lastname.leadingAnchor.constraint(equalTo: firstname.leadingAnchor),
-            lastname.trailingAnchor.constraint(equalTo: firstname.trailingAnchor),
-            
-            emaildisplay.topAnchor.constraint(equalTo: lastname.bottomAnchor, constant: 20),
-            emaildisplay.leadingAnchor.constraint(equalTo: firstname.leadingAnchor),
-            emaildisplay.trailingAnchor.constraint(equalTo: firstname.trailingAnchor),
-            emaildisplay.heightAnchor.constraint(equalToConstant: 40), // تحديد ارتفاع
-            
-            copyInstructionLabel.topAnchor.constraint(equalTo: emaildisplay.bottomAnchor, constant: 5),
-            copyInstructionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            birthday.topAnchor.constraint(equalTo: copyInstructionLabel.bottomAnchor, constant: 20),
-            birthday.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            gender.topAnchor.constraint(equalTo: birthday.bottomAnchor, constant: 20),
-            gender.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            gender.widthAnchor.constraint(equalToConstant: 300),
-            
-            saveButton.topAnchor.constraint(equalTo: gender.bottomAnchor, constant: 20),
-            saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            saveButton.widthAnchor.constraint(equalToConstant: 200),
-            saveButton.heightAnchor.constraint(equalToConstant: 44)
-        ])
-    }
+            NSLayoutConstraint.activate([
+                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+                titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                
+                profileImage.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+                profileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                profileImage.widthAnchor.constraint(equalToConstant: 120),
+                profileImage.heightAnchor.constraint(equalTo: profileImage.widthAnchor),
+                
+                firstname.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 30),
+                firstname.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                firstname.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                
+                lastname.topAnchor.constraint(equalTo: firstname.bottomAnchor, constant: 20),
+                lastname.leadingAnchor.constraint(equalTo: firstname.leadingAnchor),
+                lastname.trailingAnchor.constraint(equalTo: firstname.trailingAnchor),
+                
+                emaildisplay.topAnchor.constraint(equalTo: lastname.bottomAnchor, constant: 20),
+                emaildisplay.leadingAnchor.constraint(equalTo: firstname.leadingAnchor),
+                emaildisplay.trailingAnchor.constraint(equalTo: firstname.trailingAnchor),
+                emaildisplay.heightAnchor.constraint(equalToConstant: 40), // تحديد ارتفاع
+                
+                copyInstructionLabel.topAnchor.constraint(equalTo: emaildisplay.bottomAnchor, constant: 5),
+                copyInstructionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                
+                birthday.topAnchor.constraint(equalTo: copyInstructionLabel.bottomAnchor, constant: 20),
+                birthday.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                
+                gender.topAnchor.constraint(equalTo: birthday.bottomAnchor, constant: 20),
+                gender.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                gender.widthAnchor.constraint(equalToConstant: 300),
+                
+                saveButton.topAnchor.constraint(equalTo: gender.bottomAnchor, constant: 15),
+                saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                saveButton.widthAnchor.constraint(equalToConstant: 200),
+                saveButton.heightAnchor.constraint(equalToConstant: 44)
+            ])
+        }
 }
+

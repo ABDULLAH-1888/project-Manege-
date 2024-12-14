@@ -44,6 +44,7 @@ class ArticleView: UIViewController, UITableViewDelegate, UITableViewDataSource 
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     // MARK: - TableView DataSource Methods
