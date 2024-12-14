@@ -216,10 +216,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W3RWD6AWJ;
+				DEVELOPMENT_TEAM = Z8A9X5GF7F;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = withyou/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "معك";
 				INFOPLIST_KEY_NSCameraUsageDescription = "نحتاج إلى الوصول إلى الكاميرا لتحديث صورة الملف الشخصي";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "يرجى السماح لنا بالوصول إلى موقعك لنظهر لك العيادات القريبة";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "نحتاج إلى الوصول لموقعك لعرض العيادات القريبة";
@@ -235,7 +236,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abdullaheesao.withyou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdullaheesa.withyou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -253,10 +254,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4W3RWD6AWJ;
+				DEVELOPMENT_TEAM = Z8A9X5GF7F;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = withyou/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "معك";
 				INFOPLIST_KEY_NSCameraUsageDescription = "نحتاج إلى الوصول إلى الكاميرا لتحديث صورة الملف الشخصي";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "يرجى السماح لنا بالوصول إلى موقعك لنظهر لك العيادات القريبة";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "نحتاج إلى الوصول لموقعك لعرض العيادات القريبة";
@@ -272,7 +274,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = abdullaheesao.withyou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdullaheesa.withyou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

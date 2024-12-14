@@ -25,28 +25,39 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HB2-zm-VCs">
                                         <rect key="frame" x="20" y="0.0" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IKP-R4-DXX">
                                         <rect key="frame" x="20" y="84" width="374" height="34"/>
+                                        <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GA9-jn-gtE">
-                                        <rect key="frame" x="145" y="168" width="124" height="38.5"/>
+                                        <rect key="frame" x="20" y="168" width="374" height="38.5"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="تسجيل الدخول"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="تسجيل الدخول">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="0.83011692879999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bd7-0E-HSg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jch-xI-Gx5">
                                         <rect key="frame" x="12" y="256.5" width="390" height="38.5"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="تسجيل"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="تسجيل">
+                                            <color key="baseForegroundColor" red="0.2117646933" green="0.45490193369999998" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uzu-wV-opF"/>
                                         </connections>
@@ -56,12 +67,18 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Jch-xI-Gx5" secondAttribute="trailing" constant="12" id="1bN-Xh-gse"/>
                                     <constraint firstAttribute="trailing" secondItem="HB2-zm-VCs" secondAttribute="trailing" constant="20" id="8fD-9k-mLm"/>
+                                    <constraint firstAttribute="trailing" secondItem="GA9-jn-gtE" secondAttribute="trailing" constant="20" id="VpA-DG-Um7"/>
                                     <constraint firstAttribute="trailing" secondItem="IKP-R4-DXX" secondAttribute="trailing" constant="20" id="W0Q-n0-o8z"/>
                                     <constraint firstItem="IKP-R4-DXX" firstAttribute="leading" secondItem="Dqe-Dl-OMB" secondAttribute="leading" constant="20" id="cyA-bU-hem"/>
+                                    <constraint firstItem="GA9-jn-gtE" firstAttribute="leading" secondItem="Dqe-Dl-OMB" secondAttribute="leading" constant="20" id="eIW-6h-Vqf"/>
                                     <constraint firstItem="HB2-zm-VCs" firstAttribute="leading" secondItem="Dqe-Dl-OMB" secondAttribute="leading" constant="20" id="fsZ-uO-Mom"/>
                                     <constraint firstItem="Jch-xI-Gx5" firstAttribute="leading" secondItem="Dqe-Dl-OMB" secondAttribute="leading" constant="12" id="yhh-lt-HwU"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ywS-8I-5Ms">
+                                <rect key="frame" x="163" y="193" width="89" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -91,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3549" y="5"/>
+            <point key="canvasLocation" x="3547.826086956522" y="4.6875"/>
         </scene>
         <!--تحدياتي-->
         <scene sceneID="Y90-Ga-3id">
@@ -793,7 +810,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="N30-XZ-gko"/>
+        <segue reference="4Sp-1G-ve2"/>
         <segue reference="gKG-24-8Hj"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -811,6 +828,7 @@
         <image name="Video1" width="1280" height="720"/>
         <image name="background" width="590" height="1280"/>
         <image name="nearHospital" width="2400" height="1140"/>
+        <image name="newLogo" width="3105" height="3334"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
         <image name="video2" width="1280" height="720"/>
         <systemColor name="labelColor">
@@ -820,10 +838,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="underPageBackgroundColor">
+            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
