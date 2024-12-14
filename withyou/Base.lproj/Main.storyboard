@@ -140,6 +140,10 @@
                                     <navigationItem title="استمتع برحلتك نحو تطوير ذاتك!" id="iv5-a3-YEB"/>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BTNchalnge" translatesAutoresizingMaskIntoConstraints="NO" id="oIG-xg-JJW">
+                                <rect key="frame" x="0.0" y="501" width="402" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r8U-Zc-RCt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -402,7 +406,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
-                                    <backgroundConfiguration key="background" image="BTN1GoToHOSP"/>
+                                    <backgroundConfiguration key="background" image="BTN1GoToHOSP" imageContentMode="scaleToFill"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="BTNgotomap:" destination="8O2-DY-bRP" eventType="touchUpInside" id="cEI-7v-XqP"/>
@@ -478,9 +482,12 @@
                                 <buttonConfiguration key="configuration" style="plain" title="">
                                     <backgroundConfiguration key="background" cornerRadius="30" image="BTNvideoard"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="m27-5W-Jcl" kind="show" id="8Nw-ir-iE1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTg-q3-G5e">
-                                <rect key="frame" x="12" y="564" width="378" height="122"/>
+                                <rect key="frame" x="12" y="564" width="378" height="151"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
                                     <backgroundConfiguration key="background" cornerRadius="30" image="BTNpaperARD"/>
@@ -493,7 +500,6 @@
                         <viewLayoutGuide key="safeArea" id="ZyC-62-hFQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZyC-62-hFQ" firstAttribute="bottom" secondItem="WTg-q3-G5e" secondAttribute="bottom" constant="129" id="0uY-bm-gpw"/>
                             <constraint firstItem="inm-uv-1vx" firstAttribute="trailing" secondItem="4yb-J4-leB" secondAttribute="trailing" id="51m-eY-C5c"/>
                             <constraint firstItem="inm-uv-1vx" firstAttribute="top" secondItem="SKC-4L-ran" secondAttribute="bottom" constant="62" id="5a4-mF-H7C"/>
                             <constraint firstItem="hV1-yI-3ad" firstAttribute="leading" secondItem="ZyC-62-hFQ" secondAttribute="leading" constant="300" id="6Fx-WO-PVi"/>
@@ -509,6 +515,7 @@
                             <constraint firstItem="ZyC-62-hFQ" firstAttribute="trailing" secondItem="WTg-q3-G5e" secondAttribute="trailing" constant="12" id="a61-Vg-YSJ"/>
                             <constraint firstItem="4yb-J4-leB" firstAttribute="top" secondItem="LRx-Nd-xIT" secondAttribute="top" constant="387" id="bcz-hj-hI7"/>
                             <constraint firstItem="hV1-yI-3ad" firstAttribute="top" secondItem="ZyC-62-hFQ" secondAttribute="top" constant="92" id="ceK-EY-vvz"/>
+                            <constraint firstItem="ZyC-62-hFQ" firstAttribute="bottom" secondItem="WTg-q3-G5e" secondAttribute="bottom" constant="100" id="fq4-vv-gBM"/>
                             <constraint firstItem="WTg-q3-G5e" firstAttribute="top" secondItem="N75-be-7Zh" secondAttribute="bottom" constant="12" id="iCh-Kd-iTA"/>
                             <constraint firstItem="inm-uv-1vx" firstAttribute="leading" secondItem="ZyC-62-hFQ" secondAttribute="leading" constant="12" id="x7o-hp-hzJ"/>
                         </constraints>
@@ -518,7 +525,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vO0-pw-mz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5652" y="55"/>
+            <point key="canvasLocation" x="5650.746268656716" y="54.919908466819216"/>
+        </scene>
+        <!--Video View-->
+        <scene sceneID="NNw-Xc-3Jr">
+            <objects>
+                <viewController id="m27-5W-Jcl" customClass="VideoView" customModule="withyou" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wbz-yC-xot">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="864"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="son-ot-Pmc">
+                                <rect key="frame" x="12" y="210" width="378" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="مشاهدة المقطع">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="BtnVideo1:" destination="m27-5W-Jcl" eventType="touchUpInside" id="sZ0-dC-Rjg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Video1" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-aV-xmX">
+                                <rect key="frame" x="12" y="12" width="378" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="ag4-vh-CIC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJa-aJ-V9P">
+                                <rect key="frame" x="12" y="455" width="378" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="مشاهدة المقطع">
+                                    <backgroundConfiguration key="background" cornerRadius="10">
+                                        <color key="backgroundColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="BtnVideo2:" destination="m27-5W-Jcl" eventType="touchUpInside" id="Dfe-iq-aCT"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video2" translatesAutoresizingMaskIntoConstraints="NO" id="FJA-gN-Vfv">
+                                <rect key="frame" x="12" y="257" width="378" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="0F1-G2-d2x"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Video1" translatesAutoresizingMaskIntoConstraints="NO" id="8P1-eQ-BN2">
+                                <rect key="frame" x="12" y="502" width="378" height="264"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3N-MJ-dFr">
+                                <rect key="frame" x="12" y="774" width="378" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="مشاهدة المقطع">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="BtnVideo3:" destination="m27-5W-Jcl" eventType="touchUpInside" id="Hge-8u-oDo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C0S-dq-uIb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8P1-eQ-BN2" firstAttribute="top" secondItem="GJa-aJ-V9P" secondAttribute="bottom" constant="8" symbolic="YES" id="1Cg-fn-LHD"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="trailing" secondItem="FJA-gN-Vfv" secondAttribute="trailing" constant="12" id="6T6-hO-M5b"/>
+                            <constraint firstItem="son-ot-Pmc" firstAttribute="top" secondItem="0V2-aV-xmX" secondAttribute="bottom" constant="8" symbolic="YES" id="9bi-pA-JVh"/>
+                            <constraint firstItem="8P1-eQ-BN2" firstAttribute="top" secondItem="GJa-aJ-V9P" secondAttribute="bottom" constant="8" symbolic="YES" id="Akj-Az-swu"/>
+                            <constraint firstItem="R3N-MJ-dFr" firstAttribute="top" secondItem="8P1-eQ-BN2" secondAttribute="bottom" constant="8" symbolic="YES" id="Bsd-GY-VRR"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="trailing" secondItem="R3N-MJ-dFr" secondAttribute="trailing" constant="12" id="Bwc-tI-vH4"/>
+                            <constraint firstItem="R3N-MJ-dFr" firstAttribute="top" secondItem="8P1-eQ-BN2" secondAttribute="bottom" constant="8" symbolic="YES" id="D36-ra-qga"/>
+                            <constraint firstItem="son-ot-Pmc" firstAttribute="leading" secondItem="C0S-dq-uIb" secondAttribute="leading" constant="12" id="HBN-LG-ShS"/>
+                            <constraint firstItem="GJa-aJ-V9P" firstAttribute="top" secondItem="FJA-gN-Vfv" secondAttribute="bottom" constant="8" symbolic="YES" id="Jvi-FU-GwB"/>
+                            <constraint firstItem="FJA-gN-Vfv" firstAttribute="top" secondItem="son-ot-Pmc" secondAttribute="bottom" constant="8" symbolic="YES" id="LVT-Ov-PE3"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="trailing" secondItem="GJa-aJ-V9P" secondAttribute="trailing" constant="12" id="Mj8-3P-l4K"/>
+                            <constraint firstItem="GJa-aJ-V9P" firstAttribute="leading" secondItem="C0S-dq-uIb" secondAttribute="leading" constant="12" id="NQE-32-eKY"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="bottom" secondItem="R3N-MJ-dFr" secondAttribute="bottom" constant="51" id="Y5Y-R4-rAH"/>
+                            <constraint firstItem="0V2-aV-xmX" firstAttribute="leading" secondItem="C0S-dq-uIb" secondAttribute="leading" constant="12" id="ZSt-k2-CGA"/>
+                            <constraint firstItem="son-ot-Pmc" firstAttribute="top" secondItem="0V2-aV-xmX" secondAttribute="bottom" constant="8" symbolic="YES" id="apf-Fp-X8q"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="trailing" secondItem="8P1-eQ-BN2" secondAttribute="trailing" constant="12" id="eGK-ez-E03"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="trailing" secondItem="0V2-aV-xmX" secondAttribute="trailing" constant="12" id="i1b-bm-1Jp"/>
+                            <constraint firstItem="C0S-dq-uIb" firstAttribute="trailing" secondItem="son-ot-Pmc" secondAttribute="trailing" constant="12" id="mN2-rj-Oav"/>
+                            <constraint firstItem="FJA-gN-Vfv" firstAttribute="leading" secondItem="C0S-dq-uIb" secondAttribute="leading" constant="12" id="pgD-XD-KxZ"/>
+                            <constraint firstItem="GJa-aJ-V9P" firstAttribute="top" secondItem="FJA-gN-Vfv" secondAttribute="bottom" constant="8" symbolic="YES" id="q6i-LP-a6L"/>
+                            <constraint firstItem="R3N-MJ-dFr" firstAttribute="leading" secondItem="C0S-dq-uIb" secondAttribute="leading" constant="12" id="sdy-aH-7oC"/>
+                            <constraint firstItem="0V2-aV-xmX" firstAttribute="top" secondItem="C0S-dq-uIb" secondAttribute="top" constant="12" id="tfv-qJ-P04"/>
+                            <constraint firstItem="FJA-gN-Vfv" firstAttribute="top" secondItem="son-ot-Pmc" secondAttribute="bottom" constant="8" symbolic="YES" id="voW-vY-qxf"/>
+                            <constraint firstItem="8P1-eQ-BN2" firstAttribute="leading" secondItem="C0S-dq-uIb" secondAttribute="leading" constant="12" id="zvR-Ol-d4E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jHH-jn-tmw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xX1-ND-gLn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5650.746268656716" y="-698.16933638443936"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="0LA-Oi-l5z">
@@ -631,7 +738,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ji-LV-TuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5642" y="-648"/>
+            <point key="canvasLocation" x="6715" y="-669"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="295-C7-pSu">
@@ -642,6 +749,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.20000001789999999" green="0.43137252329999998" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="SU8-MH-G6C" kind="relationship" relationship="viewControllers" id="aij-ga-4by"/>
@@ -656,7 +766,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Sp-1G-ve2"/>
+        <segue reference="N30-XZ-gko"/>
         <segue reference="gKG-24-8Hj"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -667,17 +777,23 @@
         <image name="BTN1GoToHOSP" width="2400" height="1140"/>
         <image name="BTNFull" width="970" height="970"/>
         <image name="BTNardTM" width="2400" height="1140"/>
+        <image name="BTNchalnge" width="2400" height="1140"/>
         <image name="BTNpaperARD" width="2400" height="1140"/>
         <image name="BTNvideoard" width="2400" height="1140"/>
         <image name="Twopng" width="1920" height="1080"/>
+        <image name="Video1" width="1280" height="720"/>
         <image name="background" width="393.33334350585938" height="853.33331298828125"/>
         <image name="nearHospital" width="2400" height="1140"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
+        <image name="video2" width="1280" height="720"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

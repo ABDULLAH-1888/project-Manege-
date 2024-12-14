@@ -15,7 +15,32 @@ class VideoView: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func BtnVideo1(_ sender: Any) {
+        if let url = URL(string: "https://www.youtube.com/watch?app=desktop&v=Fpzpm-XB0oE") {
+                   UIApplication.shared.open(url, options: [:], completionHandler: nil)
+               } else {
+                   print("نعتذر توجد مشكلة !")
+               }
+    }
+    
+    
+    
+    @IBAction func BtnVideo2(_ sender: Any) {
+        if let url = URL(string: "https://youtu.be/sYp_nXzH9EY?si=b5N4e_mG5GjexmBP") {
+                   UIApplication.shared.open(url, options: [:], completionHandler: nil)
+               } else {
+                   print("نعتذر توجد مشكلة !")
+               }
+    }
+    
+    @IBAction func BtnVideo3(_ sender: Any) {
+        
+        if let url = URL(string: "https://youtu.be/sYp_nXzH9EY?si=b5N4e_mG5GjexmBP") {
+                   UIApplication.shared.open(url, options: [:], completionHandler: nil)
+               } else {
+                   print("نعتذر توجد مشكلة !")
+               }
+    }
     /*
     // MARK: - Navigation
 
