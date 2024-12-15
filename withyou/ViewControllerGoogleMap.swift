@@ -17,11 +17,11 @@ class ViewControllerGoogleMap: UIViewController {
     
 
     @IBAction func BTNgotomap(_ sender: Any) {
-        if let url = URL(string: "https://www.google.com/maps/search/عيادة+الصحة+النفسية%E2%80%AD%E2%80%AD/@26.0977891,43.8952698,10.69z?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            print("نعتذر لم يتم تحديد الموقع !")
-        }
+        if let url = URL(string: "https://www.google.com/maps/search/?api=1&query=عيادة+الصحة+النفسية") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                print("نعتذر لم يتم تحديد الموقع !")
+            }
     }
     
     
